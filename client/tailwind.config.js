@@ -4,9 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#D90429', // set primary color
-        'primary-tint': '#FA0B33', // set primary tint color
-        'primary-shade': '#B80422', // set primary shade color
+        'palette-1': '#42647A', // dark blue-gray
+        'palette-2': '#D3E1EA', // very light blue
+        'palette-3': '#A6C0D2', // light blue
+        'palette-4': '#7EA6C2', // medium blue
+        'palette-5': '#395062', // dark blue
+        'palette-6': '#26323B', // very dark blue
+        'palette-cream': '#E5DCC3', // slightly darker cream for banners
       },
     },
   },

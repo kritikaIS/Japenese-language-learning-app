@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import logo from '../assets/SakuraStudyLogo.svg';
+import { useSelector } from 'react-redux';
+import lightLogo from '../assets/light_final.png';
+import darkLogo from '../assets/dark_final.png';
 import { HiEye, HiEyeOff } from 'react-icons/hi';
 import { FaExclamationCircle } from 'react-icons/fa';
 import { AiOutlineLoading } from 'react-icons/ai';
@@ -8,6 +10,7 @@ import { AiOutlineLoading } from 'react-icons/ai';
 import { useMutation } from '@apollo/client'; // import the useMutation hook
 import { ADD_USER } from '../utils/mutations'; // import the ADD_USER mutation
 import Auth from '../utils/auth'; // import the Auth utility function
+import curtain from '../assets/bannerBG/bg-curtain.svg';
 
 const Signup = () => {
   const loggedIn = Auth.loggedIn();
@@ -15,6 +18,7 @@ const Signup = () => {
     return <Navigate to="/dashboard" />;
   }
 
+  const darkMode = useSelector((state) => state.darkMode.value);
   const [showPassword, setShowPassword] = useState(false); // state for toggling password visibility
   const [addUser, { loading, error }] = useMutation(ADD_USER); // use the useMutation hook to execute the ADD_USER mutation
   const [errorMessage, setErrorMessage] = useState(''); // state for displaying error message
@@ -72,11 +76,11 @@ const Signup = () => {
         className="form-container-style"
       >
         <img
-          src={logo}
-          alt="Sakura Study Logo"
-          className="w-12 h-12 mx-auto mb-2"
+          src={darkMode ? darkLogo : lightLogo}
+          alt="KanaQuest Logo"
+          className="w-16 h-16 mx-auto mb-2 border border-palette-3 dark:border-palette-5 rounded-full shadow-md"
         />
-        <h1 className="text-2xl font-bold mb-6 text-center">Sign up</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">Sign up for KanaQuest</h1>
         {/* Fields Container */}
         <div className="w-full flex flex-col gap-4">
           {/* Username Field Wrapper*/}
@@ -150,17 +154,17 @@ const Signup = () => {
 
         {/* Submit Button */}
         <button
-          className="w-full mt-6 py-3 px-6 bg-primary hover:bg-primary-shade text-white font-bold rounded-xl"
+          className="w-full mt-6 py-3 px-6 bg-palette-1 hover:bg-palette-5 text-palette-2 font-bold rounded-xl"
           type="submit"
         >
           {loading ? <AiOutlineLoading className="animate-spin h-6 w-6 mx-auto" /> : 'Create account'}
         </button>
         {/* Login Link */}
-        <p className="mt-6 text-gray-500 dark:text-gray-400 text-center">
+        <p className="mt-6 text-palette-5 dark:text-palette-3 text-center">
           Already have an account?{' '}
           <Link
             to="/login"
-            className="font-bold text-primary hover:text-primary-shade hover:underline"
+            className="font-bold text-palette-1 hover:text-palette-5 hover:underline"
           >
             Log in
           </Link>

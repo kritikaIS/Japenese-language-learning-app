@@ -42,7 +42,7 @@ const CompleteScreen = ({ quiz }) => {
       <hr
         id="divider"
         style={{ opacity: 0, width: 0 }}
-        className="w-full max-w-2xl border-4 border-primary"
+        className="w-full max-w-2xl border-4 border-palette-1"
       />
       {/* Quiz Statistics Cards */}
       <div className="w-full max-w-2xl flex flex-row gap-2 sm:gap-4 md:gap-8 font-bold">

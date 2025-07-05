@@ -3,9 +3,9 @@ import { HiX, HiCheck } from 'react-icons/hi';
 
 const FeedbackMessage = ({ questionState, answer }) => {
   return (
-    <div className={`py-4 md:p-0 flex h-full ${questionState === 'correct' ? 'text-[#4CAD02] dark:text-lime-500' : 'text-red-600 dark:text-red-400'}`}>
+    <div className={`py-4 md:p-0 flex h-full ${questionState === 'correct' ? 'text-palette-4 dark:text-palette-3' : 'text-palette-5 dark:text-palette-4'}`}>
       {/* Icon */}
-      <div className={`hidden w-20 h-20 mr-4 rounded-full md:flex justify-center items-center bg-white ${questionState === 'correct' ? ' dark:bg-lime-500' : 'dark:bg-red-400'}`}>
+      <div className={`hidden w-20 h-20 mr-4 rounded-full md:flex justify-center items-center bg-palette-2 ${questionState === 'correct' ? ' dark:bg-palette-3' : 'dark:bg-palette-4'}`}>
         {questionState === 'correct' ? (
           <HiCheck className="w-16 h-16 stroke-1 dark:text-slate-800" />
         ) : (

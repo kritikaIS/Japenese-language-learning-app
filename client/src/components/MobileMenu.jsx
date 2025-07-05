@@ -33,7 +33,7 @@ const MobileMenu = () => {
       {/* Mobile Menu */}
       <div
         id="mobileMenu"
-        className="sm:hidden w-full h-20 fixed z-50 bottom-0 bg-white dark:bg-slate-800 border-t-2 border-gray-300 dark:border-gray-700"
+        className="sm:hidden w-full h-20 fixed z-50 bottom-0 bg-palette-2 dark:bg-palette-6 border-t-2 border-palette-3 dark:border-palette-5"
       >
         <ul className="h-full flex justify-around items-center">
           {/* Navigation Links */}
@@ -61,7 +61,7 @@ const MobileMenu = () => {
             </button>
             {/* Options Menu */}
             {toggleOptions && (
-              <ul className="absolute z-10 bottom-full w-36 right-0 mb-6 p-1 bg-white dark:bg-slate-800 rounded-xl overflow-hidden flex flex-col gap-1 shadow-md border-2 border-gray-300 dark:border-gray-700">
+              <ul className="absolute z-10 bottom-full w-36 right-0 mb-6 p-1 bg-palette-2 dark:bg-palette-6 rounded-xl overflow-hidden flex flex-col gap-1 shadow-md border-2 border-palette-3 dark:border-palette-5">
                 {/* Dark Mode Button */}
                 <li>
                   <button

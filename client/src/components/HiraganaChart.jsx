@@ -1,5 +1,5 @@
 import React from 'react';
-import { hiraganaData } from '../data';
+import hiraganaData from '../data/hiragana/hiraganaData';
 
 const HiraganaChart = () => {
   return (

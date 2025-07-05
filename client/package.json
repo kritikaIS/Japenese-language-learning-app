@@ -1,5 +1,6 @@
 {
-  "name": "client",
+  "name": "kanaquest",
+  "description": "KanaQuest - Learn Japanese kana and more with interactive lessons and quizzes.",
   "private": true,
   "version": "0.0.0",
   "type": "module",

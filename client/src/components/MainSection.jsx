@@ -123,7 +123,8 @@ const MainSection = () => {
             />
           </Routes>
         </main>
-        {!quizLocation && <Footer />}
+        {/* Only show Footer if not on home, login, signup, profile, leaderboards, characters, or quiz pages */}
+        {!(pathname === '/' || pathname === '/login' || pathname === '/signup' || pathname === '/profile' || pathname === '/leaderboards' || pathname === '/characters') && !quizLocation && <Footer />}
       </div>
       {loggedIn && !quizLocation && <MobileMenu />}
     </>

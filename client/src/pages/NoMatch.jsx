@@ -8,7 +8,7 @@ const NoMatch = () => {
   return (
     <section
       className={`w-full ${
-        loggedIn ? 'min-h-screen' : 'min-h-[calc(100vh-72px)] hero-bg'
+        loggedIn ? 'min-h-screen' : 'min-h-[calc(100vh-72px)] bg-palette-2 dark:bg-palette-6'
       } flex justify-center items-center text-center`}
     >
       {/* 404 Error Message */}

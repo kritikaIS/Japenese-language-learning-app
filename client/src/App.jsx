@@ -47,7 +47,7 @@ function App() {
     // This will make the client available to all components
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <div className="bg-gray-50 dark:bg-slate-900 text-slate-800 dark:text-gray-100">
+        <div className="bg-palette-2 dark:bg-palette-6 text-palette-6 dark:text-palette-2">
           {/* Router and Routes are located in Main */}
           <MainSection />
         </div>
